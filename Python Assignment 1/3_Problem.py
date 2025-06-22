@@ -1,8 +1,21 @@
-Physics = 78
-Chemistry = 90
-Biology = 78
-Mathematics = 99
-Computer = 100
+"""
+
+3.  Write a Python program to input marks for five subjects Physics, Chemistry, Biology, Mathematics, and Computer.
+    Calculate the percentage and grade according to the following:
+    Percentage >= 90% : Grade A
+    Percentage >= 80% : Grade B
+    Percentage >= 70% : Grade C
+    Percentage >= 60% : Grade D
+    Percentage >= 40% : Grade E
+    Percentage < 40% : Grade F
+
+"""
+
+Physics = int(input("Enter Your Physics Number: "))
+Chemistry = int(input("Enter Your Chemistry Number: "))
+Biology = int(input("Enter Your Biology Number: "))
+Mathematics = int(input("Enter Your Mathematics Number: "))
+Computer = int(input("Enter Your Computer Number: "))
 
 percentage = ((Physics + Chemistry + Biology + Mathematics + Computer) / 500) * 100
 

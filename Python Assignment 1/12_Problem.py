@@ -1,3 +1,11 @@
+"""
+
+12. Write a Python program to reverse a number using a while loop.
+    Sample Input: num = 12345
+    Sample Output: revnum = 54321
+
+"""
+
 number = 123
 
 rev = 0
