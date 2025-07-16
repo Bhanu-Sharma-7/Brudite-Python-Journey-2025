@@ -6,11 +6,12 @@
 
 """
 
+# Input strings
 str1 = "bhanu"
 str2 = "uahbn"
 
-sorted(str1)
-sorted(str2)
-
-if len(str1) == len(str2):
-    print("It is an Anagrams")
+# Check if sorted characters of both strings are equal
+if sorted(str1) == sorted(str2):
+    print("It is an Anagram")
+else:
+    print("It is not an Anagram")

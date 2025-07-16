@@ -7,12 +7,24 @@
 
 """
 
-def readLines():
+def read_lines(filename: str):
+    """
+    Reads all lines from the given file and returns them as a list.
+    Handles FileNotFoundError gracefully.
+    Args:
+        filename (str): The name of the file to read.
+    Returns:
+        list: List of lines from the file, or empty list if file not found.
+    """
     try:
-        with open("./Demo.txt", "r") as f:
-            fileLines = f.readlines()
-            print(len(fileLines))
+        with open(filename, "r") as f:
+            return f.readlines()
     except FileNotFoundError:
         print("File is not found.")
+        return []
 
-readLines()
+if __name__ == "__main__":
+    # Prompt user for filename and print the number of lines in the file
+    filename = input("Enter filename: ")
+    lines = read_lines(filename)
+    print(f"Line count: {len(lines)}")

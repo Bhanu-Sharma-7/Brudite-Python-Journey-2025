@@ -6,15 +6,12 @@
 
 """
 
+from collections import Counter
+
+# Input list
 lst = [1, 2, 1]
 
-dictionary = {}
-
-for i in lst:
-    if i in dictionary:
-        dictionary[i] += 1
-    else:
-        dictionary[i] = 1
-        
-for key, value in dictionary.items():
+# Use Counter to count frequency of each element
+frequency = Counter(lst)
+for key, value in frequency.items():
     print(f"{key} -> {value}")

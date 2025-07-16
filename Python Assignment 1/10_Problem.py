@@ -8,11 +8,17 @@
 
 """
 
+# Input string
 string = "Bhanu Sharma"
+
+# Split the string into words
 word = string.split()
+
+# Reverse the list of words
 reverse = word[::-1]
-print(reverse)
+print(reverse)  # Output: ['Sharma', 'Bhanu']
 
-getter = ''.join(reverse)
+# Join the reversed words with a space to form the reversed sentence
+getter = ' '.join(reverse)
 
-print(getter)
+print(getter)  # Output: Sharma Bhanu

@@ -16,11 +16,16 @@
 from typing import List
 
 def compute_squares(number: List[int]) -> List[int]:
-    squares = []
-    for convert in number:
-        squares.append(convert * convert)
-    return squares
+    """
+    Return a list of squares of the given numbers.
+    Args:
+        number (List[int]): List of integers to be squared.
+    Returns:
+        List[int]: List containing squares of the input numbers.
+    """
+    # Using list comprehension for concise and efficient code
+    return [x * x for x in number]
 
-
-print(compute_squares([1, 2, 3]))
-print(compute_squares([2, 3, 4]))
+# Example usage
+print(compute_squares([1, 2, 3]))  # Output: [1, 4, 9]
+print(compute_squares([2, 3, 4]))  # Output: [4, 9, 16]
