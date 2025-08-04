@@ -1,18 +1,31 @@
-"""
+def skillbrew_brudite(n: int) -> str:
+    """
+    Returns specific strings based on divisibility rules:
+    - Divisible by both 3 and 5: "BRUDITE - NIRVANA"
+    - Divisible by 3: "SKILLBREW"
+    - Divisible by 5: "BRUDITE"
+    - Else: returns the number as string
+    
+    Args:
+        n: Integer to evaluate
+        
+    Returns:
+        str: Result based on divisibility rules
+    """
+    if n % 3 == 0 and n % 5 == 0:
+        return "BRUDITE - NIRVANA"
+    elif n % 3 == 0:
+        return "SKILLBREW"
+    elif n % 5 == 0:
+        return "BRUDITE"
+    return str(n)
 
-1.  Write a program in Python to perform the following
-    operation:
-    If a number is divisible by 3 it should print “SKILLBREW” as a string
-    If a number is divisible by 5 it should print “BRUDITE” as a string
-    If a number is divisible by both 3 and 5 it should print “BRUDITE - NIRVANA” as a string.
+# Test cases
+test_numbers = [3, 5, 15, 7, 30, 9, 10]
+results = [(num, skillbrew_brudite(num)) for num in test_numbers]
 
-"""
-
-n = 15
-
-if n % 3 == 0 and n % 5 == 0:
-    print("Brudite - Nirvana")
-elif n % 3 == 0:
-    print("SkillBrew")
-elif n % 5 == 0:
-    print("Brudite")
+# Display results
+print("TEST RESULTS:")
+print("-" * 30)
+for num, result in results:
+    print(f"{num:>3} → {result}")
